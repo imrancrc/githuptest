@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Örnekleri</title>
+</head>
+<body>
+    <!-- If-Else Yapısı -->
+    <h1>If-Else Yapısı Örneği</h1>
+    <p>Bir sayının pozitif, negatif veya sıfır olup olmadığını kontrol eden bir if-else yapısı:</p>
+    <h2 id="ifElseResult"></h2>
+
+    <!-- Operatörlerle Matematiksel İşlem -->
+    <h2>Operatörleri Kullanarak Matematiksel İşlem:</h2>
+    <p>İki sayının toplamını, farkını, çarpımını ve bölümünü hesaplama:</p>
+    <h3 id="mathResult"></h3>
+
+    <!-- For Döngüsü ile Rakamlar -->
+    <h3>For Döngüsü ile 1'den 10'a Kadar Rakamları Yazdırma</h3>
+    <p>For döngüsü kullanarak 1'den 10'a kadar olan sayıları konsola yazma:</p>
+    <ul id="forLoopResult"></ul>
+
+    <script>
+        // 1. If-Else Yapısı: Bir sayının pozitif, negatif veya sıfır olup olmadığını kontrol etme
+        let sayi = prompt("Bir sayı girin:"); // Kullanıcıdan sayı almak
+        let ifElseResult = '';
+
+        if (sayi > 0) {
+            ifElseResult = "Sayı pozitiftir.";
+        } else if (sayi < 0) {
+            ifElseResult = "Sayı negatiftir.";
+        } else {
+            ifElseResult = "Sayı sıfırdır.";
+        }
+
+        // Sonucu HTML üzerinde gösterme
+        document.getElementById("ifElseResult").textContent = ifElseResult;
+
+        // 2. Operatörlerle Matematiksel İşlem
+        let sayi1 = 10;
+        let sayi2 = 5;
+
+        let toplam = sayi1 + sayi2;
+        let fark = sayi1 - sayi2;
+        let carpim = sayi1 * sayi2;
+        let bolum = sayi1 / sayi2;
+
+        // Sonucu HTML üzerinde gösterme
+        let mathResult = `
+            Toplam: ${toplam} <br>
+            Fark: ${fark} <br>
+            Çarpım: ${carpim} <br>
+            Bölüm: ${bolum}
+        `;
+        document.getElementById("mathResult").innerHTML = mathResult;
+
+        // 3. For Döngüsü ile 1'den 10'a kadar olan sayıları yazdırma
+        let forLoopResult = '';
+        for (let i = 1; i <= 10; i++) {
+            forLoopResult += `<li>${i}</li>`;
+        }
+
+        // Sonucu HTML üzerinde liste olarak gösterme
+        document.getElementById("forLoopResult").innerHTML = forLoopResult;
+    </script>
+</body>
+</html>
